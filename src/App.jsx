@@ -56,10 +56,16 @@ function App() {
   }
 
   return (
-    <>
-      <h1>REACT QUIZ</h1>
+    <div className="bg-white 
+    rounded 
+    p-3 
+    text-primary 
+    d-flex 
+    flex-column
+    align-items-center" >
+      <h3>REACT QUIZ</h3>
       {gameOver || userAnswers.length === 10 ?
-      <button className="start" onClick={startTrivia}>
+      <button className="start btn btn-primary" onClick={startTrivia}>
         Start
       </button>
       : null}
@@ -76,11 +82,11 @@ function App() {
         />
       )}
       {!gameOver && !loading && userAnswers.length === number + 1 && number !== 10 - 1 ? (
-        <button className='next' onClick={nextQuestion}>
+        <button className='next btn btn-primary m-1' onClick={nextQuestion}>
         Next Question
       </button>
       ) : null}
-    </>
+    </div>
   );
 }
 
